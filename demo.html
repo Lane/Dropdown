@@ -1,0 +1,53 @@
+<!-- 	
+This demo is strictly to demonstrate the features and usage of 
+responder and does not necessarily represent best practices.
+-->
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Responsive Dropdown Demo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style>
+		body { font-family: sans-serif;  }
+
+		header h1 { padding: 20px; font-weight: normal;}
+		p { padding: 0px 20px; }
+		h2 { padding: 0px 20px; }
+		
+		
+	</style>
+</head>
+<body>
+  	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<header>
+		<h1>Responsive Dropdown Demo</h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="#">Link One</a></li>
+			<li><a href="#">Link Two</a></li>
+			<li><a href="#">Link Three</a></li>
+			<li><a href="#">Link Four</a></li>
+			<li><a href="#">Link Five</a></li>
+		</ul>
+	</nav>
+	
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  	<script src="dropdown.js"></script>
+  	<script type="text/javascript">
+  		$(document).ready(function()
+  		{
+  			$('nav').dropdown();
+  		});
+
+  	</script>
+</body>
+</html>
