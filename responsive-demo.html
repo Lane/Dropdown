@@ -1,0 +1,122 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Responsive Dropdown Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        body { font-family: sans-serif;  }
+        ::selection { color: #fff; background: #000; }
+
+        header h1 { padding: 20px; font-weight: normal;}
+        p { padding: 0px 20px; }
+        h2 { padding: 0px 20px; }
+        
+        section { color: #999; }
+        section:hover { color: #000; }
+        section:hover header h1 { background: #000; }
+        section:hover pre { border-color: #000; }
+        section header h1 { margin: 20px 20px 0px 20px; background: #999; color: #fff; padding: 15px 10px;}
+        pre { margin: 0px 20px; border: 2px solid #999; padding: 10px; overflow: auto;}
+        
+        /* Navigation CSS */
+		nav { border: 2px solid #000; margin: 0px 20px;}
+		nav ul { padding: 0; margin: 0; list-style: none; }
+		nav ul li a { display: block; padding: 10px; background: #fff; color: #000; text-decoration: none; }
+		nav ul li a:hover { background: #000; color: #fff; }
+		nav ul li a strong { float: right; font-size: 8px; margin-top: 5px; }
+		
+		nav.desktop ul li a { display: none; }
+		nav.desktop ul li ul li { display: inline; }
+		nav.desktop ul li ul li a { display: inline-block; }
+    
+    </style>
+</head>
+<body>
+    <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <header>
+        <h1>Responsive Dropdown Demo</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Link One</a></li>
+            <li><a href="#">Link Two</a></li>
+            <li><a href="#">Link Three</a></li>
+            <li><a href="#">Link Four</a></li>
+            <li><a href="#">Link Five</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <header>
+            <h1>The HTML</h1>
+        </header>
+        <pre>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link One&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link Two&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link Three&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link Four&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link Five&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+    </section>
+    <section>
+        <header>
+            <h1>The CSS</h1>
+        </header>
+        <pre>nav { border: 2px solid #000; margin: 0px 20px;}
+nav ul { padding: 0; margin: 0; list-style: none; }
+nav ul li a { display: block; padding: 10px; background: #fff; color: #000; text-decoration: none; }
+nav ul li a:hover { background: #000; color: #fff; }
+nav ul li a strong { float: right; font-size: 8px; margin-top: 5px; }
+
+nav.desktop ul li a { display: none; }
+nav.desktop ul li ul li { display: inline; }
+nav.desktop ul li ul li a { display: inline-block; }</pre>
+    </section>
+    <section>
+        <header>
+            <h1>The Javascript</h1>
+        </header>
+        <pre>$(document).ready(function()
+{
+    $(&#39;nav&#39;).dropdown().responder({ 
+        breakpoints: [
+            new $.responsive.Breakpoint(0, &quot;mobile&quot;, function() { 
+                $(&#39;nav ul li ul&#39;).hide();
+            }),
+            new $.responsive.Breakpoint(768, &quot;desktop&quot;, function() { 
+                $(&#39;nav ul li ul&#39;).show();
+            })
+        ]
+    });
+});</pre>
+    </section>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="dropdown.js"></script>
+    <script src="https://github.com/Lane/Responder/raw/master/responder.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $('nav').dropdown().responder({ 
+                breakpoints: [
+                    new $.responsive.Breakpoint(0, "mobile", function() { 
+                        $('nav ul li ul').hide(); // hide dropdown for mobile
+                    }),
+                    new $.responsive.Breakpoint(768, "desktop", function() { 
+                        $('nav ul li ul').show(); // show navigation for desktop
+                    })
+                ]
+            });
+        });
+
+    </script>
+</body>
+</html>
