@@ -1,7 +1,7 @@
 Dropdown
 ========
 
-jQuery plugin that turns an ordinary list of links into a drop down menu.
+Very simple and lightweight (~1.3KB) jQuery plugin that turns an ordinary list of links into a drop down menu.  Can easily be combined with the [responder](https://www.github.com/Lane/Responder) plugin to create simple responsive navigation.
 
 ## Usage ##
 
