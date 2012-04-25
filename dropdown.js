@@ -54,7 +54,7 @@ Requires:		responder (to trigger code on breakpoints):
 				if(subNav.is(":hidden")) {
 				
 					subNav.css('width',
-						base.$el.outerWidth()-(parseInt(subNav.css('border-left-width'),10)+parseInt(subNav.css('border-right-width'),10))
+						base.$el.find('ul:first').outerWidth()-(parseInt(subNav.css('border-left-width'),10)+parseInt(subNav.css('border-right-width'),10))
 					).slideDown('fast').show();
 					
 					$('strong', linkEl).html(base.options.htmlArrowLess);
