@@ -1,15 +1,12 @@
 /** 
-Responsive Dropdown
+Dropdown
 ---------------------------------------------------------------------
 Author: 		Lane Olson
 Sources: 		jQuery Plugin Patterns:
 					http://coding.smashingmagazine.com/2011/10/11/essential-jquery-plugin-patterns/
 Version:		1.0
 Date: 			April 24, 2012
-Description:	Shows a list of links on large resolutions, displays as
-				a dropdown list of links on small resolutions.
-Requires:		responder (to trigger code on breakpoints):
-					https://github.com/Lane/Responder
+Description:	Displays a list of links as a dropdown menu
 ---------------------------------------------------------------------
 **/
 ;(function ($) {
