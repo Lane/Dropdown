@@ -3,6 +3,11 @@ Dropdown
 
 Very simple and lightweight (~1.3KB) jQuery plugin that turns an ordinary list of links into a drop down menu.  Can easily be combined with the [responder](https://www.github.com/Lane/Responder) plugin to create simple responsive navigation.
 
+## Demo ##
+
+1. [Basic Demo](http://www.laneolson.ca/sandbox/dropdown/demo.html) - This demo contains the basic dropdown menu
+2. [Responsive Demo](http://www.laneolson.ca/sandbox/dropdown/responsive-demo.html) - This demo shows a responsive dropdown based on device width.  Uses the [responder](https://www.github.com/Lane/Responder) plugin.
+
 ## Basic Usage ##
 
 ### HTML ###
