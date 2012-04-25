@@ -76,7 +76,7 @@ Description:	Displays a list of links as a dropdown menu
 		};
 		
 		base.init();
-	}
+	};
 	
 	$.responsive.dropdown.defaultOptions = {
 		linkText: 'Navigation',
