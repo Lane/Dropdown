@@ -76,14 +76,18 @@ This is just the css used in the demo, feel free to use your own.
 Include the required libraries/plugins (jQuery, dropdown, responder) and add this before the closing body tag:
 
     <script type="text/javascript">
-        $('nav').dropdown().responder({ 
-            breakpoints: [
-                new $.responsive.Breakpoint(0, "mobile", function() { 
-                    $('nav ul li ul').hide(); // hide dropdown for mobile
-                }),
-                new $.responsive.Breakpoint(768, "desktop", function() { 
-                    $('nav ul li ul').show(); // show navigation for desktop
-                })
-            ]
+        $(document).ready(function()
+        {
+            var navElement = $('nav');
+            navElement.dropdown().responder({ 
+                breakpoints: [
+                    new $.responsive.Breakpoint(0, "mobile", function() { 
+                       navElement.trigger('createdropdown'); 
+                    }),
+                    new $.responsive.Breakpoint(767, "desktop", function() { 
+                        navElement.trigger('destroydropdown'); 
+                    })
+                ]
+            });
         });
     </script>
